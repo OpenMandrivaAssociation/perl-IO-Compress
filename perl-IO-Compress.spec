@@ -1,6 +1,6 @@
 %define module   IO-Compress
 %define version  2.019
-%define release  %mkrel 1
+%define release  %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -13,6 +13,10 @@ Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.gz
 BuildRequires: perl-devel
 BuildRequires: perl(Compress::Raw::Bzip2)
 BuildRequires: perl(Compress::Raw::Zlib)
+Obsoletes:     perl-IO-Compress-Base
+Obsoletes:     perl-IO-Compress-Bzip2
+Obsoletes:     perl-IO-Compress-Zlib
+Obsoletes:     perl-Compress-Zlib
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
