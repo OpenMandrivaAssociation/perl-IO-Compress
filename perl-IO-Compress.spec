@@ -11,8 +11,8 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Compress::Raw::Bzip2)
-BuildRequires: perl(Compress::Raw::Zlib)
+BuildRequires: perl(Compress::Raw::Bzip2) >= 2.21.0
+BuildRequires: perl(Compress::Raw::Zlib)  >= 2.21.0
 BuildRequires: perl-devel
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
