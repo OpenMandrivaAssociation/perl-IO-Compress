@@ -1,23 +1,25 @@
-%define module   IO-Compress
-%define version  2.020
-%define release  %mkrel 1
+%define upstream_name    IO-Compress
+%define upstream_version 2.021
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    IO Interface to compressed data files/buffers
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.gz
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Compress::Raw::Bzip2)
 BuildRequires: perl(Compress::Raw::Zlib)
+BuildRequires: perl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
+Obsoletes:     perl-Compress-Zlib
 Obsoletes:     perl-IO-Compress-Base
 Obsoletes:     perl-IO-Compress-Bzip2
 Obsoletes:     perl-IO-Compress-Zlib
-Obsoletes:     perl-Compress-Zlib
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 This distribution provides a Perl interface to allow reading and writing of
@@ -27,7 +29,7 @@ IO-Compress supports reading and writing of bzip2, RFC 1950, RFC
 1951, RFC 1952 (i.e. gzip) and zip files/buffers.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -52,4 +54,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/File
 %{perl_vendorarch}/auto/IO
 %{perl_vendorarch}/auto/Compress
-
