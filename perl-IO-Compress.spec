@@ -1,5 +1,5 @@
 %define upstream_name    IO-Compress
-%define upstream_version 2.021
+%define upstream_version 2.022
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -48,8 +48,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man3/*
-%{perl_vendorarch}/IO
-%{perl_vendorarch}/Compress
-%{perl_vendorarch}/File
+%{perl_vendorlib}/Compress
+%{perl_vendorlib}/File
+%{perl_vendorlib}/IO
+%{perl_vendorlib}/auto/Compress
 %{perl_vendorarch}/auto/IO
-%{perl_vendorarch}/auto/Compress
