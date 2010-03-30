@@ -1,5 +1,5 @@
 %define upstream_name    IO-Compress
-%define upstream_version 2.024
+%define upstream_version 2.025
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
