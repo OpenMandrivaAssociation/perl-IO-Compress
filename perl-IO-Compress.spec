@@ -3,22 +3,26 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
+
 Summary:    IO Interface to compressed data files/buffers
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
-BuildRequires: perl-devel
+
 # perl provides this one unversionned
 #BuildRequires: perl(Compress::Raw::Bzip2) >= 2.21.0
 BuildRequires: perl-Compress-Raw-Bzip2 >= 2.21.0
 BuildRequires: perl(Compress::Raw::Zlib)  >= 2.21.0
+BuildRequires: perl-devel
+
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
 Obsoletes:     perl-Compress-Zlib
 Obsoletes:     perl-IO-Compress-Base
 Obsoletes:     perl-IO-Compress-Bzip2
 Obsoletes:     perl-IO-Compress-Zlib
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This distribution provides a Perl interface to allow reading and writing of
@@ -35,7 +39,7 @@ IO-Compress supports reading and writing of bzip2, RFC 1950, RFC
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
