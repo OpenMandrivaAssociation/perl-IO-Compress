@@ -1,9 +1,9 @@
 %define upstream_name    IO-Compress
-%define upstream_version 2.027
+%define upstream_version 2.030
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    IO Interface to compressed data files/buffers
 License:    GPL+ or Artistic
