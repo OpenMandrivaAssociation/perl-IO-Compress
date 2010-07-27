@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    IO Interface to compressed data files/buffers
 License:    GPL+ or Artistic
@@ -13,8 +13,8 @@ Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream
 
 # perl provides this one unversionned
 #BuildRequires: perl(Compress::Raw::Bzip2) >= 2.21.0
-BuildRequires: perl-Compress-Raw-Bzip2 >= 2.21.0
-BuildRequires: perl(Compress::Raw::Zlib)  >= 2.21.0
+BuildRequires: perl-Compress-Raw-Bzip2    >= 2.30.0
+BuildRequires: perl(Compress::Raw::Zlib)  >= 2.30.0
 BuildRequires: perl-devel
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
