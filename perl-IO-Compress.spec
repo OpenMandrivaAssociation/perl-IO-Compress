@@ -16,6 +16,7 @@ Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream
 BuildRequires: perl-Compress-Raw-Bzip2    >= 2.30.0
 BuildRequires: perl(Compress::Raw::Zlib)  >= 2.30.0
 BuildRequires: perl-devel
+BuildArch: noarch
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -23,6 +24,7 @@ Obsoletes:     perl-Compress-Zlib
 Obsoletes:     perl-IO-Compress-Base
 Obsoletes:     perl-IO-Compress-Bzip2
 Obsoletes:     perl-IO-Compress-Zlib
+Obsoletes:     %{name} < 2.33.0-2
 
 %description
 This distribution provides a Perl interface to allow reading and writing of
@@ -55,4 +57,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Compress
 %{perl_vendorlib}/File
 %{perl_vendorlib}/IO
-%{perl_vendorarch}/auto/IO
