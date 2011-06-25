@@ -1,5 +1,5 @@
 %define upstream_name    IO-Compress
-%define upstream_version 2.035
+%define upstream_version 2.037
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -13,8 +13,8 @@ Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream
 
 # perl provides this one unversionned
 #BuildRequires: perl(Compress::Raw::Bzip2) >= 2.21.0
-BuildRequires: perl-Compress-Raw-Bzip2    >= 2.30.0
-BuildRequires: perl(Compress::Raw::Zlib)  >= 2.30.0
+BuildRequires: perl-Compress-Raw-Bzip2    >= 2.37.0
+BuildRequires: perl(Compress::Raw::Zlib)  >= 2.37.0
 BuildRequires: perl-devel
 BuildArch: noarch
 
