@@ -25,8 +25,6 @@ Obsoletes:     perl-IO-Compress-Base
 Obsoletes:     perl-IO-Compress-Bzip2
 Obsoletes:     perl-IO-Compress-Zlib
 Obsoletes:     %{name} < 2.33.0-2
-# temporary dep due to the perl-5.14 bump
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 %description
 This distribution provides a Perl interface to allow reading and writing of
