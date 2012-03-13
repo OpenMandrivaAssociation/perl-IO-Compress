@@ -1,9 +1,9 @@
 %define	upstream_name		IO-Compress
-%define	upstream_version	2.037
+%define	upstream_version	2.049
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:	IO Interface to compressed data files/buffers
 License:	GPL+ or Artistic
@@ -45,6 +45,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 %files
 %doc Changes README
+%{_bindir}/zipdetails
+%{_mandir}/man1/zipdetails.1*
 %{_mandir}/man3/*
 %{perl_vendorlib}/Compress
 %{perl_vendorlib}/File
