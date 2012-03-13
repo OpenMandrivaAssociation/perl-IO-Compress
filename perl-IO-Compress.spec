@@ -12,9 +12,8 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
 
 # perl provides this one unversionned
-#BuildRequires:	perl(Compress::Raw::Bzip2) >= 2.21.0
-BuildRequires:	perl-Compress-Raw-Bzip2    >= %{version}
-BuildRequires:	perl(Compress::Raw::Zlib)  >= %{version}
+BuildRequires:	perl(Compress::Raw::Bzip2) >= %{version}
+BuildRequires:	perl(Compress::Raw::Zlib) >= %{version}
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
