@@ -1,5 +1,5 @@
 %define	upstream_name		IO-Compress
-%define	upstream_version	2.049
+%define	upstream_version	2.059
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -54,6 +54,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 
 %changelog
+* Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.59.0-1
+- new version
+
 * Tue Mar 13 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.49.0-1
 + Revision: 784860
 - new version
