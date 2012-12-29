@@ -1,15 +1,15 @@
-%define	upstream_name		IO-Compress
-%define	upstream_version	2.059
+%define	modname	IO-Compress
+%define	modver	2.059
 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
 Release:	1
 
 Summary:	IO Interface to compressed data files/buffers
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
 
 # perl provides this one unversionned
 BuildRequires:	perl(Compress::Raw::Bzip2) >= %{version}
@@ -21,7 +21,6 @@ Obsoletes:	perl-Compress-Zlib
 Obsoletes:	perl-IO-Compress-Base
 Obsoletes:	perl-IO-Compress-Bzip2
 Obsoletes:	perl-IO-Compress-Zlib
-Obsoletes:	%{name} < 2.33.0-2
 
 %description
 This distribution provides a Perl interface to allow reading and writing of
@@ -31,7 +30,7 @@ IO-Compress supports reading and writing of bzip2, RFC 1950, RFC
 1951, RFC 1952 (i.e. gzip) and zip files/buffers.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -52,9 +51,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorlib}/File
 %{perl_vendorlib}/IO
 
-
 %changelog
 * Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.59.0-1
+- cleanups
 - new version
 
 * Tue Mar 13 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.49.0-1
