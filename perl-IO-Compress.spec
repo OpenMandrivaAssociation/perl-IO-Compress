@@ -1,5 +1,5 @@
 %define	modname	IO-Compress
-%define	modver	2.062
+%define	modver	2.060
 
 Summary:	IO Interface to compressed data files/buffers
 Name:		perl-%{modname}
