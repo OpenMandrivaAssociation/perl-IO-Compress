@@ -1,10 +1,10 @@
 %define	modname	IO-Compress
-%define	modver	2.062
+%define	modver	2.063
 
 Summary:	IO Interface to compressed data files/buffers
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
