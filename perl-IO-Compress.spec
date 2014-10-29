@@ -1,14 +1,14 @@
 %define	modname	IO-Compress
-%define modver 2.064
+%define modver 2.066
 
 Summary:	IO Interface to compressed data files/buffers
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/IO/IO-Compress-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 # perl provides this one unversionned
 BuildRequires:	perl(Compress::Raw::Bzip2) >= %{version}
@@ -47,5 +47,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorlib}/IO
 %{_mandir}/man1/zipdetails.1*
 %{_mandir}/man3/*
-
-

@@ -1,4 +1,5 @@
 removed_sources:
   IO-Compress-2.063.tar.gz: cc2bd46c8bf9f0dab90e6de74f06ee3bec195275
-sources:
   IO-Compress-2.064.tar.gz: 1b90096381cbabe6498985b3172b2dce99a66e94
+sources:
+  IO-Compress-2.066.tar.gz: c50704c257893539cf52b0dbddea7b369a5df78a
