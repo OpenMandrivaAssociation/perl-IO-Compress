@@ -1,14 +1,13 @@
 %define	modname	IO-Compress
-%define modver 2.074
 
 Summary:	IO Interface to compressed data files/buffers
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	2.204
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 # perl provides this one unversionned
 BuildRequires:	perl(Compress::Raw::Bzip2) >= %{version}
@@ -27,23 +26,25 @@ IO-Compress supports reading and writing of bzip2, RFC 1950, RFC
 1951, RFC 1952 (i.e. gzip) and zip files/buffers.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
+%{_bindir}/streamzip
 %{_bindir}/zipdetails
 %{perl_vendorlib}/Compress
 %{perl_vendorlib}/File
 %{perl_vendorlib}/IO
+%{_mandir}/man1/streamzip.1*
 %{_mandir}/man1/zipdetails.1*
 %{_mandir}/man3/*
